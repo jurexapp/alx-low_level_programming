@@ -17,7 +17,15 @@ void print_to_98(int n)
 		int o = m;
 		for (; o <= 98; o++)
 		{
-			printf("%d, ", o);
+
+			if (n == 98)
+			{
+				printf("%d\n", n);
+			}
+			else
+			{
+				printf("%d, ", o);
+			}
 		}
 	}
 	else if (m > 98)
