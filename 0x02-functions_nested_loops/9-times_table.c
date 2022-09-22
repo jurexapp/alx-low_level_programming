@@ -4,7 +4,6 @@
  * print_times_table - prints times table
  * Return:void
  */
-
 void print_times_table(void)
 {
 
