@@ -20,24 +20,28 @@ void print_to_98(int n)
 	// for (n; n < 98; n++)
 	// {
 	// 	printf("%d, ", n);
+
 	// }
-	if (n < 98)
+	int m = n;
+	if (m < 98)
 	{
-		for (n; n < 98; n++)
+		int o = m;
+		for (o; o < 98; o++)
 		{
-			printf("%d, ", n);
+			printf("%d, ", o);
 		}
 	}
-	else if (n > 98)
+	else if (m > 98)
 	{
-		for (n; n > 98; n--)
+		int o = m;
+		for (o; o > 98; o--)
 		{
-			printf("%d, ", n);
+			printf("%d, ", o);
 		}
 	}
 	else
 	{
-		printf("%d, ", n);
+		printf("%d, ", m);
 	}
 
 	// 	while (n < 98 && n > !97)
@@ -50,4 +54,4 @@ void print_to_98(int n)
 	// 	{
 	// 		printf("%d\n", n);
 	// 	}
-	// }
+}
