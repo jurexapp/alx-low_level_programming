@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * times_table - prints times table
+ * print_times_table - prints times table
  * Return:void
  */
 
-void times_table(void)
+void print_times_table(void)
 {
 
     int a = 0;
