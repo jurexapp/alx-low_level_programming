@@ -20,3 +20,13 @@ int _isalpha(int);
 int _islower(int c);
 
 void print_alphabet_x10(void);
+
+void print_times_table(int n);
+
+void print_to_98(int n);
+
+int add(int a, int b);
+
+int _abs(int c);
+
+int print_last_digit(int c);
