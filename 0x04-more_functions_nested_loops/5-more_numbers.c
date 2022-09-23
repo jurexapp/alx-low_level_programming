@@ -1,38 +1,26 @@
 #include "main.h"
 /**
- * more_numbers - Entry point for program
+ * more_numbers - Print numbers between 0 to 14 incl.
  *
- * Return: On success 1
- * On error, -1 is returned, and errno is set appropriately.
- *
+ * Return: Void.
  */
-
-
-
 void more_numbers(void)
-
 {
-	int c;
 	int i;
+	int x;
 
-	for (c = 0; c <= 9; c++)
-
+	for (x = 0; x < 10; x++)
 	{
-		for (i = 0; i <= 14; i++)
+		i = 0;
+		while (i <= 14)
 		{
-			if (i < 10)
+			if (i >= 10)
 			{
-			_putchar(i + '0');
+				_putchar(i / 10 + '0');
 			}
-			else
-			{
-			_putchar((i / 10) + '0');
-			_putchar((i % 10) + '0');
-			}
+			_putchar(i % 10 + '0');
+			i++;
 		}
-
-
 		_putchar('\n');
 	}
-
 }
