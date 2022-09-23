@@ -1,33 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * print_most_numbers - Entry point for program
- *
- * Return: On success 1
- * On error, -1 is returned, and errno is set appropriately.
- *
+ * print_diagonal - Print diagonal line dependent on the integer n.
+ * @n : The number of lines using '\' characters to use
+ * Return: Void.
  */
-
-
-
 void print_diagonal(int n)
-
 {
-	int c = 92;
+	int i;
+	int spaces;
 
-	while (n--)
-
+	for (i = 0; i < n; i++)
 	{
-		if (n <= 0)
-
-		{	_putchar('\n');
+		for (spaces = 0; spaces < i; spaces++)
+		{
+			_putchar(' ');
 		}
-
-		_putchar (c);
-		_putchar ('\t');
-
+		_putchar('\\');
+		_putchar('\n');
 	}
 
-
-
-
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
 }
