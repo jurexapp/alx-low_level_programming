@@ -1,44 +1,37 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int _putchar(char c);
+
 /**
- * print_most_numbers - Entry point for program
+ * print_number - like a hello world
  *
- * Return: On success 1
- * On error, -1 is returned, and errno is set appropriately.
+ * @n: params an integer
  *
+ * No return
  */
 
-
-
 void print_number(int n)
-
 {
-	
-	if (n >= 0 && n <= 9)
-	{
-		_putchar(n + '0');
-	}
-	
-	else if (n >= 10 && n <= 99)
-	{
 
-		_putchar((n/10) + '0');
-		_putchar((n % 10) + '0');
-	}
-	
-	else if (n >= 99 && n <= 999)
+	unsigned int n1 = 0;
+
+	if (n < 0)
 	{
-		_putchar((n/100) + '0');
-		_putchar(n%100 + '0');
-		_putchar((n % 10) + '0');
+		n1 = -n;
+		_putchar('-');
 	}
+
 	else
 	{
-		_putchar((n/1000) + '0'); 
-		_putchar((char)n % 1000 + '0');
-		_putchar((char)n % 100 + '0');
-		_putchar((char)n % 10 + '0');
+		n1 = n;
 	}
 
-		_putchar('\n');
+	if (n1 / 10)
+	{
+		print_number(n1 / 10);
+	}
 
+	_putchar((n1 % 10) + '0');
 }
