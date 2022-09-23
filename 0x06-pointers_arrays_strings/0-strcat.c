@@ -6,26 +6,35 @@
  *
  * Return: Concatenated version of the strings
  */
-char *_strcat(char *dest, char *src)
+
+/**
+ * _strncat - two words
+ * @dest : pointer to char param
+ * @src : pointer to char param
+ * @n : int parameter
+ * Return: *dest
+ */
+
+char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0;
-	int j = 0;
-	int c;
+	int m;
+	int i;
 
-	while (dest[i] != '\0')
+	m = 0;
+
+	for (i = 0; i < 1000; i++)
 	{
-		i++;
+		if (dest[i] == '\0')
+		{
+			break;
+		}
+		m++;
 	}
 
-	while (src[j] != '\0')
+	for (i = 0; src[i] != '\0' && i < n; i++)
 	{
-		j++;
+		dest[m + i] = src[i];
 	}
-	c = j;
-
-	for (j = 0; j <= c; j++)
-	{
-		dest[i + j] = src[j];
-	}
+	dest[m + i] = '\0';
 	return (dest);
 }
